@@ -22,6 +22,11 @@ app.use(exp.json());
 
 app.use(cookieParser());
 
+// root route
+app.get("/", (req, res) => {
+  res.send("Employee Management Backend Running");
+});
+
 app.use("/api", empApp);
 
 // connect to db server
