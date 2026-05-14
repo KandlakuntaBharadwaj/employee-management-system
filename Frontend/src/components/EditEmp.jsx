@@ -31,7 +31,7 @@ function EditEmp() {
     try {
       setLoading(true);
       const res = await axios.put(
-        `http://localhost:4000/api/emp/${state._id}`,
+        `https://employee-management-system-f6or.onrender.com/api/emp/${state._id}`,
         modifiedEmp
       );
       if (res.status === 200) {
