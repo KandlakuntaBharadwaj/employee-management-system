@@ -27,14 +27,14 @@ app.use("/api", empApp);
 // connect to db server
 async function connectDB() {
   try {
-    
+
     await connect(process.env.MONGO_URI);
 
     console.log("db connection successful");
 
     const port = process.env.PORT || 4000;
 
-    app.listen(port, () =>
+    app.listen(port, "0.0.0.0", () =>
       console.log(`server listening to ${port}`)
     );
 
@@ -42,6 +42,8 @@ async function connectDB() {
     console.log("err in db connection :", err);
   }
 }
+
+console.log("MONGO_URI =", process.env.MONGO_URI);
 
 connectDB();
 
