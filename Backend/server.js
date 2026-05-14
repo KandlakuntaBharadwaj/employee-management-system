@@ -12,7 +12,11 @@ const app = exp();
 // add cors middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://employee-management-system-1qgl-jkda3a6d0.vercel.app",
+      "https://employee-management-system-1qgl.vercel.app"
+    ],
     credentials: true,
   })
 );
