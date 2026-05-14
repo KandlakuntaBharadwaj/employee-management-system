@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router';
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center px-4">
       
@@ -45,7 +49,10 @@ function Home() {
 
         </div>
 
-        <button className="mt-10 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl text-lg font-semibold transition duration-300">
+        <button 
+          onClick={() => navigate('/create-emp')}
+          className="mt-10 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white px-8 py-3 rounded-xl text-lg font-semibold transition duration-300"
+        >
           Get Started
         </button>
 
