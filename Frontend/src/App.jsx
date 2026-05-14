@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Rootlayout from "./components/Rootlayout";
+import Rootlayout from "./components/RootLayout";
 import Home from "./components/Home";
 import CreateEmp from "./components/CreateEmp";
 import ListOfEmp from "./components/ListOfEmp";
